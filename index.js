@@ -1,6 +1,7 @@
 const express = require("express");
 const bodyParser = require("body-parser");
-const ticketsRoutes = require("./api/routes/tickets");
+const questionsRoutes = require("./api/routes/questions");
+const answersRoutes = require("./api/routes/answers");
 const usersRoutes = require("./api/routes/users");
 
 const mongoose = require("mongoose");
@@ -23,7 +24,8 @@ mongoose
     console.log(err);
   });
 
-app.use(ticketsRoutes);
+app.use(answersRoutes);
+app.use(questionsRoutes);
 app.use(usersRoutes);
 
 app.use((req, res, next) => {

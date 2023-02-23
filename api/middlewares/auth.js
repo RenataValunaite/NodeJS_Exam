@@ -13,7 +13,7 @@ module.exports = (req, res, next) => {
       next();
     } else {
       console.log(err, "auth failed");
-      return res.status(400).json({ tickets: "auth failed" });
+      return res.status(400).json({ answers: "auth failed" });
     }
   });
 };
